@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/Egglog.png" type="img/x-icon" />
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+          body {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            height: 100vh;
+          }
+        
+          #nav-bar {
+            justify-content: center; 
+            width: 300px;
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20px;
+            background-color: #5FBDFF;
+            padding: 10px; 
+            border-radius: 20px;
+            text-align: center; 
+            padding: 15px 30px 15px 30px;
+            box-shadow: 
+            0px 5px 0px #3d7d9f, 
+            inset 0px -1px 1px rgba(255,255,255,0.5);
+          }
+        
+        #nav-bar a{
+        
+            margin: 0 20px; 
+            background-color: #FF8400;
+            color: whitesmoke;
+            padding: 5px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        
+          #logo {
+            cursor: pointer;
+            position: absolute; 
+            top: 20px;
+            right: 20px;
+            width: 70px;
+            height: 70px;
+            border-radius: 25px;
+            border: solid;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5), 
+            0 0 40px rgba(0,0,0,0.3) inset;
+          }
+
+          #logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.7), 0 0 60px rgba(0,0,0,0.5) inset;  
+            }
+        </style>
+        
+        
+            
+        
+    <img id="logo" src="img/Egglog.png">
+    
+    <nav id="nav-bar">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+              
+            
+    <script>
+    const logo = document.getElementById('logo');
+    const nav = document.getElementById('nav-bar');
+    
+    logo.addEventListener('click', () => {
+        nav.style.display = nav.style.display == 'block' ? 'none' : 'block'; 
+    }); 
+    </script>
+    <audio src="audio/uwu.mp3" autoplay loop volume="0.3"></audio>
+    <table class="center">
+      <tbody>
+        <tr>
+          <td>
+            <fieldset>
+              <legend class="nameBoxRed"><b>Player Red</b></legend>
+              <input
+                class="nameBoxRed"
+                type="text"
+                id="redPlayerName"
+                placeholder="Username"
+                required
+              /><br />
+            </fieldset>
+          </td>
+          <td>
+            <fieldset>
+              <legend class="nameBoxYellow"><b>Player Yellow</b></legend>
+              <input
+                class="nameBoxYellow"
+                type="text"
+                id="yellowPlayerName"
+                placeholder="Username"
+                required
+              />
+            </fieldset>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="button-75-container">
+      <a href="game.html">
+        <button class="button-75" onclick="passValues();" type="submit">
+          <span>Let's go</span>
+        </button>
+      </a>
+    </div>
+  </body>
+  <script src="connect4.js"></script>
+</html>
