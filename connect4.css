@@ -50,8 +50,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-     /* Ensure the winner image is on top */
-    text-align: center; /* Center the content inside the winner element */
+    text-align: center; 
     filter: drop-shadow(20px 20px 50px #494949);
     border: 0;
 }
@@ -91,8 +90,6 @@ body {
     height: 70px;
     width: 70px;
     margin: 5px;
-
-    /* Circle */
     background-color: white;
     border-radius: 50%;
     border: 5px solid navy;
@@ -339,7 +336,7 @@ body {
     transform: translateX(-50%); 
   }
   
-  /* New Game Button */
+
   #newgame {
     position: relative;
     bottom: 50px;
