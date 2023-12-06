@@ -14,13 +14,44 @@ body {
 }
 
 
+#players {
+  position: absolute;
+  transform: translateY(-50%);
+  left: 100px;
+}
+
+#players h3 {
+  background-color: #494949;
+  border: solid 2px; 
+  border-radius: 18px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.player-color {
+  border: solid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0px;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;  
+}
 
 #winner{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; 
+     /* Ensure the winner image is on top */
+    text-align: center; /* Center the content inside the winner element */
     filter: drop-shadow(20px 20px 50px #494949);
     border: 0;
 }
@@ -61,6 +92,7 @@ body {
     width: 70px;
     margin: 5px;
 
+    /* Circle */
     background-color: white;
     border-radius: 50%;
     border: 5px solid navy;
@@ -306,7 +338,8 @@ body {
     left: 37%; 
     transform: translateX(-50%); 
   }
-
+  
+  /* New Game Button */
   #newgame {
     position: relative;
     bottom: 50px;
