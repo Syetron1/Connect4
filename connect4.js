@@ -11,6 +11,11 @@ var currColumns = [];
 
 
 window.onload = function() {
+    const redPlayer = document.getElementById("red-player");
+redPlayer.textContent = localStorage.getItem("textvalueRed");
+
+const yellowPlayer = document.getElementById("yellow-player");
+yellowPlayer.textContent = localStorage.getItem("textvalueYellow");
     setGame();
 }
 
@@ -22,14 +27,15 @@ function setGame() {
     for (let r = 0; r < rows; r++) {
         let row = [];
         for (let c = 0; c < columns; c++) {
-            // JS
+
             row.push(' ');
-            // HTML
+
             let tile = document.createElement("div");
             tile.id = r.toString() + "-" + c.toString();
             tile.classList.add("tile");
             tile.addEventListener("click", setPiece);
             document.getElementById("board").append(tile);
+
         }
         board.push(row);
     }
@@ -68,7 +74,6 @@ function setPiece() {
 }
 
 function checkWinner() {
-     // horizontal
      for (let r = 0; r < rows; r++) {
          for (let c = 0; c < columns - 3; c++){
             if (board[r][c] != ' ') {
